@@ -13,7 +13,7 @@ import { CreatorPage } from "./pages/creator.page";
 import { SurveyAnalyticsComponent } from "./components/survey.analytics.component";
 import { AnalyticsPage } from "./pages/analytics.page";
 import { PdfExportPage } from "./pages/pdfexport.page";
-import { FileSaverModule } from 'ngx-filesaver';
+
 
 @NgModule({
   declarations: [
@@ -27,7 +27,7 @@ import { FileSaverModule } from 'ngx-filesaver';
     AnalyticsPage,
     PdfExportPage,
   ],
-  imports: [BrowserModule, FormsModule, HttpClientModule, AppRoutingModule,FileSaverModule],
+  imports: [BrowserModule, FormsModule, HttpClientModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
 })

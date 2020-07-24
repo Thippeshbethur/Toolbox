@@ -1,7 +1,6 @@
 import { Component,OnInit } from "@angular/core";
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import json from "../../assets/survey.json";
-import { FileSaverService } from 'ngx-filesaver';
 
 @Component({
   selector: "creator-page",
@@ -9,16 +8,12 @@ import { FileSaverService } from 'ngx-filesaver';
 })
 export class CreatorPage {
   json = json;
-  constructor(private http: HttpClient,
-    private _FileSaverService: FileSaverService) {
+  constructor(private http: HttpClient) {
     
   }
   onSurveySaved(survey) {
     this.json = survey;
-    const fileName = 'save.json';    
-    const fileType = this._FileSaverService.genType(fileName);
-    const txtBlob = new Blob([JSON.stringify(this.json)], { type: fileType });
-    this._FileSaverService.save(txtBlob, fileName);
+
     
   }
 }

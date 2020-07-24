@@ -1,7 +1,7 @@
 {
     "pages": [
      {
-      "name": "page1",
+      "name": "page1", 
       "elements": [
        {
         "type": "comment",
